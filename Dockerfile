@@ -50,6 +50,7 @@ COPY . /usr/src/app
 RUN git clone https://github.com/xFFFFF/Gekko-Strategies
 WORKDIR ./Gekko-Strategies
     RUN bash ./install.sh /usr/src/app
+    RUN cp install.sh ..
 WORKDIR ../
 RUN rm -R Gekko-Strategies
 
